@@ -15,7 +15,7 @@ jobs:
       - name: Setup Android SDK
         run: |
           ANDROID_SDK_ROOT="$HOME/.android-sdk"
-          CMDLINE_TOOLS_VERSION="11063708"
+          CMDLINE_TOOLS_VERSION="12266719"
           ARCHIVE="commandlinetools-linux-${CMDLINE_TOOLS_VERSION}_latest.zip"
           URL="https://dl.google.com/android/repository/${ARCHIVE}"
           mkdir -p "$ANDROID_SDK_ROOT/cmdline-tools"
