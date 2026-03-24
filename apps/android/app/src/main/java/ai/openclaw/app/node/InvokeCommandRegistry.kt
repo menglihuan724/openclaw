@@ -237,19 +237,19 @@ object InvokeCommandRegistry {
 
   fun advertisedCommands(flags: NodeRuntimeFlags): List<String> {
     return all
-      .filter { spec ->
-        when (spec.availability) {
-          InvokeCommandAvailability.Always -> true
-          InvokeCommandAvailability.CameraEnabled -> flags.cameraEnabled
-          InvokeCommandAvailability.LocationEnabled -> flags.locationEnabled
-          InvokeCommandAvailability.SendSmsAvailable -> flags.sendSmsAvailable
-          InvokeCommandAvailability.ReadSmsAvailable -> flags.readSmsAvailable
-          InvokeCommandAvailability.CallLogAvailable -> flags.callLogAvailable
-          InvokeCommandAvailability.MotionActivityAvailable -> flags.motionActivityAvailable
-          InvokeCommandAvailability.MotionPedometerAvailable -> flags.motionPedometerAvailable
-          InvokeCommandAvailability.DebugBuild -> flags.debugBuild
-        }
-      }
+      // .filter { spec ->
+      //   when (spec.availability) {
+      //     InvokeCommandAvailability.Always -> true
+      //     InvokeCommandAvailability.CameraEnabled -> flags.cameraEnabled
+      //     InvokeCommandAvailability.LocationEnabled -> flags.locationEnabled
+      //     InvokeCommandAvailability.SendSmsAvailable -> flags.sendSmsAvailable
+      //     InvokeCommandAvailability.ReadSmsAvailable -> flags.readSmsAvailable
+      //     InvokeCommandAvailability.CallLogAvailable -> flags.callLogAvailable
+      //     InvokeCommandAvailability.MotionActivityAvailable -> flags.motionActivityAvailable
+      //     InvokeCommandAvailability.MotionPedometerAvailable -> flags.motionPedometerAvailable
+      //     InvokeCommandAvailability.DebugBuild -> flags.debugBuild
+      //   }
+      // }
       .map { it.name }
   }
 }
